@@ -12,9 +12,11 @@
 
 | 文件 | 说明 |
 |---|---|
-| `视频分段剪辑工具_v1.6.exe` | **图形界面版（推荐）**，双击运行，可视化设置全部参数 |
-| `分段剪辑_命令行版_v1.6.exe` | 命令行版，供批量处理或脚本调用 |
-| `视频分段剪辑工具_v1.6_发布包.zip` | 上述两个程序 + 使用说明的完整打包 |
+| `VideoSegmentSplitter_v1.6.exe` | **图形界面版（推荐）**，双击运行，可视化设置全部参数 |
+| `VideoSegmentSplitter_v1.6_CLI.exe` | 命令行版，供批量处理或脚本调用 |
+| `VideoSegmentSplitter_v1.6_full.zip` | 上述两个程序 + 使用说明的完整打包（解压后为中文文件名） |
+
+> 附件名为英文，是因为 GitHub 会把发布附件名中的非 ASCII 字符替换为下划线。压缩包内的程序保留中文名，下载解压后与原版一致。
 
 程序未做代码签名，首次运行 Windows 可能提示「已保护你的电脑」。点击**更多信息 → 仍要运行**即可。程序为独立打包，不含联网行为。
 
@@ -31,7 +33,7 @@
 
 ## 图形界面版使用步骤
 
-1. 双击 `视频分段剪辑工具_v1.6.exe`
+1. 双击 `VideoSegmentSplitter_v1.6.exe`
 2. 点击「添加视频」，支持一次选择多个文件
 3. 设置参数（见下表）
 4. 选择切分方式：精确切分／快速切分
@@ -68,13 +70,13 @@
 ## 命令行版
 
 ```bat
-分段剪辑_命令行版_v1.6.exe --cli "视频路径.mp4" 每段秒数 "输出目录"
+VideoSegmentSplitter_v1.6_CLI.exe --cli "视频路径.mp4" 每段秒数 "输出目录"
 ```
 
 示例：
 
 ```bat
-分段剪辑_命令行版_v1.6.exe --cli "C:\video\a.mp4" 5 "C:\video\output"
+VideoSegmentSplitter_v1.6_CLI.exe --cli "C:\video\a.mp4" 5 "C:\video\output"
 ```
 
 省略输出目录时，默认写入视频所在目录的 `output_分段` 文件夹。
@@ -100,14 +102,14 @@ Windows 10 / 11 64 位。无需安装 Python 或任何依赖。
 
 | 文件 | 大小 | SHA-256 |
 |---|---|---|
-| `视频分段剪辑工具_v1.6.exe` | 73,202,062 B | `9da33967d95d83812abb5b515d7b4bcd56dbe3fea25d3980c63de34c81572a24` |
-| `分段剪辑_命令行版_v1.6.exe` | 73,206,372 B | `5850d384c5c2027b5ed214fdc062ad543fa4fc2160ba22a8421e4eacb1b9c29c` |
-| `视频分段剪辑工具_v1.6_发布包.zip` | 145,454,919 B | `bc22ae5c4c6497f131637d82451c4fd6e6ec7eee5be59f64796aaec3c5d3bf94` |
+| `VideoSegmentSplitter_v1.6.exe` | 73,202,062 B | `9da33967d95d83812abb5b515d7b4bcd56dbe3fea25d3980c63de34c81572a24` |
+| `VideoSegmentSplitter_v1.6_CLI.exe` | 73,206,372 B | `5850d384c5c2027b5ed214fdc062ad543fa4fc2160ba22a8421e4eacb1b9c29c` |
+| `VideoSegmentSplitter_v1.6_full.zip` | 145,454,919 B | `bc22ae5c4c6497f131637d82451c4fd6e6ec7eee5be59f64796aaec3c5d3bf94` |
 
 Windows 下校验命令：
 
 ```bat
-certutil -hashfile "视频分段剪辑工具_v1.6.exe" SHA256
+certutil -hashfile "VideoSegmentSplitter_v1.6.exe" SHA256
 ```
 
 ## 版本历史
